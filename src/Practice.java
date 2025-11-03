@@ -75,12 +75,22 @@ public class Practice {
 
     public static int secondLargestNumber(int[] list){
         Set<Integer> listSet = new HashSet<>();
-
+        int largest = 0;
         for(int num: list){
-            
+            listSet.add(num);
+            if(num > largest){
+                largest = num;
+            }
+        }
+        listSet.remove(largest);
+        largest = 0;
+        for(int num: listSet){
+            if(num > largest){
+                largest = num;
+            }
         }
 
-        return -1;
+        return largest;
     }
 
 }

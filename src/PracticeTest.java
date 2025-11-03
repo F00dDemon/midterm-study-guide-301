@@ -62,6 +62,21 @@ public class PracticeTest {
         assertEquals(3, actual3);
 
     }
+    @Test
+    void testSecondLargestNumber() {
+        int[] nums = {1, 2, 3, 6, 5, 4, 7, 8, 10, 9, 9, 9}; //9
+        int[] nums2 = {1, 2, 3, 6, 5, 4, 7, 8, 10, 1, 1, 1}; //8
+        int[] nums3 = {1, 2, 5, 1, 4, 8, 1, 1, 5}; //5
+
+        int actual = Practice.secondLargestNumber(nums);
+        int actual2 = Practice.secondLargestNumber(nums2);
+        int actual3 = Practice.secondLargestNumber(nums3);
+
+        assertEquals(9, actual);
+        assertEquals(8, actual2);
+        assertEquals(5, actual3);
+
+    }
 }
 
 
