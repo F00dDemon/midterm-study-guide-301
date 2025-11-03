@@ -36,6 +36,16 @@ public class PracticeTest {
 
 
     }
+
+    @Test
+    void testWordCountWithLongAndShort() {
+        String[] string = {"Orion", "Skyler", "Brendan", "jennifer", "sebastian", "g", "league of legends"}; //2
+
+        int actual = Practice.wordCountWithLongAndShort(0, 6, string);
+
+        assertEquals(2, actual);
+
+    }
 }
 
 

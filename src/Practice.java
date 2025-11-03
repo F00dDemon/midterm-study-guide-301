@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class Practice {
@@ -33,5 +35,27 @@ public class Practice {
 
         return result;
     }
+
+    public static int wordCountWithLongAndShort(int longerThan, int shorterThan, String[] list){
+        Map<String, Boolean> listMap = new HashMap<>();
+        int count = 0;
+
+        for(String word : list){
+            if(word.length() > longerThan && word.length() < shorterThan){
+                listMap.put(word, true);
+            }else{
+                listMap.put(word, false);
+            }
+        }
+        for(String word : listMap.keySet()){
+            if(listMap.get(word) == true){
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    
 
 }
