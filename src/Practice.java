@@ -56,6 +56,31 @@ public class Practice {
         return count;
     }
 
-    
+    public static int differenceOfEvenAndOdd(int[] list){
+        Map<String, Integer> listMap = new HashMap<>();
+        listMap.put("Even", 0);
+        listMap.put("Odd", 0);
+
+
+        for(int num: list){
+            if(num % 2 == 0){
+                listMap.replace("Even", listMap.get("Even")+1);
+            }else{
+                listMap.replace("Odd", listMap.get("Odd")+1);
+            }
+        }
+
+        return Math.abs(listMap.get("Even") - listMap.get("Odd"));
+    }
+
+    public static int secondLargestNumber(int[] list){
+        Set<Integer> listSet = new HashSet<>();
+
+        for(int num: list){
+            
+        }
+
+        return -1;
+    }
 
 }

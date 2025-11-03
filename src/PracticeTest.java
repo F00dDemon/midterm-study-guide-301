@@ -46,6 +46,22 @@ public class PracticeTest {
         assertEquals(2, actual);
 
     }
+
+    @Test
+    void testdifferenceOfEvenAndOdd() {
+        int[] nums = {1, 2, 3, 6, 5, 4, 7, 8, 10, 9}; //0
+        int[] nums2 = {1, 2, 3, 6, 5, 4, 7, 8, 10}; //1
+        int[] nums3 = {1, 2, 6, 5, 4, 8, 10}; //3
+
+        int actual = Practice.differenceOfEvenAndOdd(nums);
+        int actual2 = Practice.differenceOfEvenAndOdd(nums2);
+        int actual3 = Practice.differenceOfEvenAndOdd(nums3);
+
+        assertEquals(0, actual);
+        assertEquals(1, actual2);
+        assertEquals(3, actual3);
+
+    }
 }
 
 
