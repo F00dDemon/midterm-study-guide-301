@@ -1,5 +1,9 @@
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class PracticeTest {
@@ -8,7 +12,8 @@ public class PracticeTest {
     @Test
     void testMaxDiffPositiveAndNegative() {
         // Arrange
-        int[] numbers = {8, -2, 9, -5};
+        List<Integer> numbers = new ArrayList<>();
+        numbers.addAll(Arrays.asList(8, -2, 9, -5));
 
         // Act
         int actual = Practice.maxDiff(numbers);
@@ -20,7 +25,17 @@ public class PracticeTest {
     
 
     // TODO: Make tests for each problem you solve
-    
+    @Test
+    void testLongestWordWithSpecificLetter() {
+        
+        String[] string = {"Orion", "Oscillate", "ozempic", "o", "ostrich"}; // Oscillate
+
+        String actual = Practice.longestWordWithSpecificLetter(string, 'o');
+
+        assertEquals("Oscillate", actual);
+
+
+    }
 }
 
 

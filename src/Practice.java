@@ -10,11 +10,7 @@ public class Practice {
      * @param nums a non-empty, non-null array of numbers
      * @return the difference between the largest and smallest number
      */
-    public static int maxDiff(int[] nums) {
-        List<Integer> numArr = new ArrayList<>();
-        for(int num: nums){
-            numArr.add(num);
-        }
+    public static int maxDiff(List<Integer> numArr) {
         numArr.sort(null);
         return numArr.get(numArr.size()-1) - numArr.get(0);
     }
@@ -25,4 +21,17 @@ public class Practice {
     // For each method you are only required to implement it for one of the data
     // structures. But use a different data structure for each method. For example,
     // do maxDiff with an array, the next question with a Set, etc.
+    public static String longestWordWithSpecificLetter(String[] list, Character charToFind){
+        String result = "";
+        charToFind = Character.toLowerCase(charToFind);
+
+        for(int i = 0; i<list.length; i++){
+            if(Character.toLowerCase(list[i].charAt(0)) == charToFind && list[i].length() > result.length()){
+                result = list[i];
+            }
+        }
+
+        return result;
+    }
+
 }
