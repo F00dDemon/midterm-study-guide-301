@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -6,8 +11,12 @@ public class Practice {
      * @return the difference between the largest and smallest number
      */
     public static int maxDiff(int[] nums) {
-        // TODO: implement this
-        return -1;
+        List<Integer> numArr = new ArrayList<>();
+        for(int num: nums){
+            numArr.add(num);
+        }
+        numArr.sort(null);
+        return numArr.get(numArr.size()-1) - numArr.get(0);
     }
 
 
